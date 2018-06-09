@@ -1,0 +1,3 @@
+
+class LinearClassification:
+    pass
