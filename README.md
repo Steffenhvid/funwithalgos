@@ -7,7 +7,11 @@ Nothing yet
 ## To be implementet
 ### Supervised Models
 Linear Classification (Started)
+
 Linear Regression
+
 Logistic Regression
 
 Neural Networks (to be expanded)
+
+$$ \sin(x) \cdot \frac{n]{k!] $$
