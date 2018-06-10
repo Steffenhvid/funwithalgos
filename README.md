@@ -13,5 +13,3 @@ Linear Regression
 Logistic Regression
 
 Neural Networks (to be expanded)
-
-$$ \sin(x) \cdot \frac{n]{k!] $$
