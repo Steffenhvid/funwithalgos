@@ -11,7 +11,7 @@ Nothing yet
 ### Supervised Models
 Linear Classification (Started)
 
-Linear Regression
+Linear Regression (Started)
 
 Logistic Regression
 
