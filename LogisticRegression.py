@@ -1,6 +1,8 @@
+from SupervisedLearning import SupervisedLearning
 import numpy as np
 
-class LogisticRegression:
+
+class LogisticRegression(SupervisedLearning):
     pass
 
     def sigmoid(self, z):
