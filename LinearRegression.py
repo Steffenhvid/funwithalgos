@@ -15,7 +15,7 @@ class LinearRegression(SupervisedLearning):
         return J
 
 
-    def gradient_descent(self, X, y, theta=None, lr=0.1, iterations=1000):
+    def gradient_descent(self, X, y, theta=None, lr=0.1, iterations=1000, epsilon=0.0000000001):
         '''
 
         :param X: np.array (n,d)
@@ -23,12 +23,15 @@ class LinearRegression(SupervisedLearning):
         :param lr: scalar, learning rate
         :return:
         '''
-        m = len(y)
+        n = len(y)
         if theta is None:
             theta = np.zeros(X.shape[1])
-        for iteration in range(iterations):
-            hypothesis = X.dot(theta)
-            loss = hypothesis - y
-            gradient = X.T.dot(loss) / m
-            theta -= lr * gradient
-        return theta
+        cost = np.zeros(iterations)
+        for i in range(iterations):
+            theta -= (lr/n) * sum((X.dot(theta) - y).dot(X))
+            cost[i] = self.MSE(X, y, theta)
+            print(self.MSE(X, y, theta))
+            if i > 10 and cost[i] - cost[i-1] < epsilon:
+                break
+        return theta, cost
+
